@@ -1,0 +1,64 @@
+<ion-view>
+  
+     <div class="bar bar-header bar-positive">
+        <h1 class="title">Profile</h1>
+        <button class="button icon ion-ios-arrow-back" ng-click="back()"></button>
+        <button class="button icon ion-edit" ng-click="toggleEdit()"></button>
+     </div>
+
+        
+   <ion-content>
+<br/><br/>
+      <br/><br/><br/><br/>
+        <form name="userForm" >
+        <div class="list list-inset col-center">
+
+            <label class="item item-input ">
+                <span class="input-label">First Name</span>
+                <input type="text" ng-model="user.firstName" ng-disabled="!edit">
+            </label>
+
+            <label class="item item-input">
+                <span class="input-label">Last Name</span>
+                <input type="text" ng-model="user.lastName" ng-disabled="!edit">
+            </label>
+
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="email" ng-model="user.email" ng-required="true" ng-disabled="true">
+            </label>
+
+            <label class="item item-input">
+                <span class="input-label">password</span>
+                <input type="password" ng-model="user.password" required="true" ng-disabled="!edit">
+            </label>
+            
+            <label class="item item-input">
+                <span class="input-label">Cell</span>
+                <input type="tel" ng-model="user.cell" ng-disabled="!edit" maxlength="10">
+            </label>
+
+             <label class="item item-input item-select">
+                <div class="input-label">
+                province
+                </div>
+                <select ng-model="user.province" ng-disabled="!edit">
+                <option>Gauteng</option>
+                <option >Limpopo</option>
+                <option>Mpumalanga</option>
+                </select>
+            </label>
+
+            <button class="button button-full button-positive" ng-show="edit" ng-disabled="!user.firstName || !user.lastName || !user.email || !user.password || !user.cell || !user.province"  ng-click="updateUser()">
+                 Update
+            </button>
+            
+        </div>
+        
+        </form>
+        
+	
+   </ion-content>
+
+  
+</ion-view>

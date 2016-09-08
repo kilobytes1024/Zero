@@ -1,0 +1,33 @@
+<ion-view>
+  <div class="bar bar-header bar-stable">
+  <h1 class="title">Zero login</h1>
+</div>
+   <ion-content class="col-center">
+
+      <br/><br/>
+      <br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="email" placeholder="Email" ng-model="user.email">
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="Password" ng-model="user.password">
+        </label>
+
+        <button class="button button-block button-positive" ng-disabled="!user.email || !user.password" ng-click="login()">
+         Login
+        </button>
+
+       <button class="button button-block button-calm"  ng-click="register()">
+         Register
+        </button>
+        <button class="button button-block button-calm" ng-click="recover()" >
+         Forgot Password
+        </button>
+        
+      </div>
+      
+   </ion-content>
+</ion-view>

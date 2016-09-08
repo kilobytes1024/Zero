@@ -1,0 +1,63 @@
+<ion-view>
+<div class="bar bar-header bar-positive">
+        
+        <button class="button icon ion-ios-arrow-back" ng-click="goBack()"></button>
+        <h1 class="title">Register</h1>
+        <button class="button" ng-click="gotoVerify()">Verify</button>
+     </div>
+   <ion-content>
+<br/><br/>
+      <br/><br/><br/><br/>
+        <form name="regform" >
+        <div class="list list-inset col-center">
+
+            <label class="item item-input ">
+                <span class="input-label">First Name</span>
+                <input type="text" ng-model="reg.firstName">
+            </label>
+
+            <label class="item item-input">
+                <span class="input-label">Last Name</span>
+                <input type="text" ng-model="reg.lastName">
+            </label>
+
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="email" ng-model="reg.email" ng-required="true">
+            </label>
+
+            <label class="item item-input">
+                <span class="input-label">password</span>
+                <input type="password" ng-model="reg.password" required="true">
+            </label>
+            
+            <label class="item item-input">
+                <span class="input-label">Cell</span>
+                <input type="tel" ng-model="reg.cell">
+            </label>
+
+             <label class="item item-input item-select">
+                <div class="input-label">
+                province
+                </div>
+                <select ng-model="reg.province">
+                <option>Gauteng</option>
+                <option >Limpopo</option>
+                <option>Mpumalanga</option>
+                </select>
+            </label>
+
+            <button class="button button-full button-positive" ng-disabled="!reg.firstName || !reg.lastName || !reg.email || !reg.password || !reg.cell || !reg.province"  ng-click="register()">
+                 Register
+            </button>
+            
+            <a href="#/">Already have account? login</a>
+        </div>
+        
+        </form>
+        
+	
+   </ion-content>
+
+  
+</ion-view>

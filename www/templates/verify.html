@@ -1,0 +1,39 @@
+<ion-view>
+  
+     <div class="bar bar-header bar-positive">
+        <button class="button icon ion-ios-arrow-back" ng-click="back()"></button>
+        <h1 class="title">Verifiy</h1>
+        
+        
+     </div>
+
+        
+   <ion-content>
+<br/><br/>
+      <br/><br/><br/><br/>
+        <form name="userForm" >
+        <div class="list list-inset col-center">
+
+            
+
+            <label class="item item-input">
+                <span class="input-label">OTP </span>
+                <input type="number" minlength="6" maxlength="6" ng-model="verification.otp" ng-required="true">
+            </label>
+
+            
+            <button class="button button-full button-positive" ng-disabled="!verification.otp"   ng-click="verifyUser()">
+                 Verify OTP
+            </button>
+            <button class="button button-full button-positive" ng-click="resendPIN()">
+                 Resend OTP
+            </button>
+        </div>
+        
+        </form>
+        
+	
+   </ion-content>
+
+  
+</ion-view>
