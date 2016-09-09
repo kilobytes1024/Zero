@@ -23,6 +23,8 @@ angular.module('starter', ['ionic','user.service','loading.service'])
   });
 })
 
+
+
 .config(function($stateProvider, $urlRouterProvider) {
     
     $urlRouterProvider.otherwise('/');
@@ -32,27 +34,27 @@ angular.module('starter', ['ionic','user.service','loading.service'])
         // HOME STATES AND NESTED VIEWS ========================================
         .state('login', {
             url: '/',
-            templateUrl: '/templates/login.html',
+            templateUrl: 'templates/login.html',
             controller : 'login'
         })
          .state('zero', {
             url: '/zero',
-            templateUrl: '/templates/zero.html',
+            templateUrl: 'templates/zero.html',
             controller:'zero'
         })
         .state('reg', {
             url: '/reg',
-            templateUrl: '/templates/register.html',
+            templateUrl: 'templates/register.html',
             controller:'registration'
         })
         .state('profile', {
             url: '/profile',
-            templateUrl: '/templates/profile.html',
+            templateUrl: 'templates/profile.html',
             controller:'profile'
         })
         .state('verify', {
             url: '/verify',
-            templateUrl: '/templates/verify.html',
+            templateUrl: 'templates/verify.html',
             controller:'verify'
         })
 })
